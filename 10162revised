@@ -1,0 +1,32 @@
+//  main.cpp
+//  baekjoon
+//  Created by 신예준 on 11/22/24.
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+
+    int array[3]={300, 60, 10};
+    int print[3]={};
+    
+    for(int i=0;i<sizeof(array)/sizeof(array[0]);i++){
+        int count = T/array[i];
+        print[i]=count;
+        T%=array[i];
+    }
+    
+    if (T != 0) {
+        cout << -1 << "\n";
+    } else {
+        for(int i=0;i<sizeof(array)/sizeof(array[0]);i++){
+            cout << print[i] << "\n";
+        }
+    }
+
+    return 0;
+}
