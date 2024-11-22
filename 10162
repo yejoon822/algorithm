@@ -1,0 +1,29 @@
+# algorithm
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+
+    int A = 300;
+    int B = 60;
+    int C = 10;
+
+    int countA = T / A;
+    T %= A;
+    int countB = T / B;
+    T %= B;
+    int countC = T / C;
+    T %= C;
+
+    if (T != 0) {
+        cout << -1 << "\n";
+    } else {
+        cout << countA << " " << countB << " " << countC << "\n";
+    }
+
+    return 0;
+}
